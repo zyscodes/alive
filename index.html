@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -222,7 +222,7 @@
 
     <div id="toast"></div>
     
-    <div class="lang-switch" onclick="toggleLanguage()" id="lang-btn">EN / 中</div>
+    <div class="lang-switch" onclick="toggleLanguage()" id="lang-btn">中 / EN</div>
 
     <div class="modal-overlay" id="onboarding-overlay">
         <div class="onboarding-card">
@@ -382,7 +382,8 @@
 
         // === 状态 ===
         let appState = { lastCheckIn: Date.now(), checkIntervalDays: 7, notes: [] };
-        let uiState = { currentEditId: null, confirmCallback: null, guideStep: 0, lang: 'en' };
+        // 默认语言设置为 'zh' (中文)
+        let uiState = { currentEditId: null, confirmCallback: null, guideStep: 0, lang: 'zh' };
 
         // === 核心逻辑 ===
         function init() {
